@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &429045676953816722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 429045676953816724}
+  - component: {fileID: 429045676953816723}
+  m_Layer: 0
+  m_Name: VehicleSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &429045676953816724
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429045676953816722}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 12.15, y: 2.04, z: 0.08185124}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &429045676953816723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429045676953816722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a5d5427352c2614ab0f1a0f09ab2fed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxTime: 0.4
+  vehicle: {fileID: 4513109231120580390, guid: 0e7fffafb89bb9641bacb609a7688ed5, type: 3}
+  reverseDirection: 0
+  sprites:
+  - {fileID: 21300000, guid: a3298580607f227478d7ff52d2496035, type: 3}
+  - {fileID: 21300000, guid: 8a788a76cde0f304dbc3e4ca83156116, type: 3}
+  - {fileID: 21300000, guid: 8a788a76cde0f304dbc3e4ca83156116, type: 3}
+  - {fileID: 21300000, guid: 6a9dbff9e6649e44ab0ca3740735102e, type: 3}
+  - {fileID: 21300000, guid: 9e32d90a623e40e43852e497313ac6bd, type: 3}
+  - {fileID: 21300000, guid: 9622b3676aa72204ab5fe05d8e434f74, type: 3}
+  - {fileID: 21300000, guid: 4e3ae9ac9f9229447a9b836d74e21402, type: 3}
+  - {fileID: 21300000, guid: 0bc04a853c5d94847b65fddc78a272ea, type: 3}
+  - {fileID: 21300000, guid: 4105149d695319e488f1edf475adca71, type: 3}
+  - {fileID: 21300000, guid: 33091878b28d960479dfa5d101ca60e7, type: 3}
