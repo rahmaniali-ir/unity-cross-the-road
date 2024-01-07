@@ -7,13 +7,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] float speed = 0.05f;
     [SerializeField] Animator animator;
+    [SerializeField] bool playable = false;
 
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
@@ -38,8 +33,22 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Vehicle"))
+        {
+            GameManager.instance.GameOver();
+        }
+        else if (other.gameObject.CompareTag("Finish"))
+        {
+            GameManager.instance.LevelCompleted();
+        }
+    }
+
     void Walk(float xOffset = 0, float yOffset = 0)
     {
+        if (!playable) return;
+
         Vector3 position = transform.position;
 
         // GameManager.instance.walking = true;
@@ -59,5 +68,15 @@ public class PlayerMovement : MonoBehaviour
         // GameManager.instance.walking = false;
         animator.SetBool("Walking", false);
         animator.SetBool("SideWalking", false);
+    }
+
+    public void ActivatePlayer()
+    {
+        playable = true;
+    }
+
+    public void DeactivatePlayer()
+    {
+        playable = false;
     }
 }
